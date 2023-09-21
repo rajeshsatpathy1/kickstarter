@@ -8,9 +8,9 @@ contract CampaignFactory {
         deployedCampaigns.push(newCampaign);
     }
 
-    function getDeployedContracts() public view returns(address[]) {
+    function getDeployedCampaigns() public view returns (address[]) {
         return deployedCampaigns;
-    } 
+    }
 }
 
 contract Campaign {
@@ -23,11 +23,11 @@ contract Campaign {
         mapping(address => bool) approvals;
     }
 
+    Request[] public requests;
     address public manager;
     uint public minimumContribution;
+    mapping(address => bool) public approvers;
     uint public approversCount;
-    mapping (address => bool) public approvers;
-    Request[] public requests;
 
     modifier restricted() {
         require(msg.sender == manager);
@@ -46,17 +46,16 @@ contract Campaign {
         approversCount++;
     }
 
-    function createRequest(string description, uint value, address recipient) 
-        public restricted () {
-            Request memory newRequest = Request({
-                description: description,
-                value: value,
-                recipient: recipient,
-                complete: false,
-                approvalCount: 0
-            });
+    function createRequest(string description, uint value, address recipient) public restricted {
+        Request memory newRequest = Request({
+           description: description,
+           value: value,
+           recipient: recipient,
+           complete: false,
+           approvalCount: 0
+        });
 
-            requests.push(newRequest);
+        requests.push(newRequest);
     }
 
     function approveRequest(uint index) public {
@@ -72,8 +71,8 @@ contract Campaign {
     function finalizeRequest(uint index) public restricted {
         Request storage request = requests[index];
 
-        require(!request.complete);
         require(request.approvalCount > (approversCount / 2));
+        require(!request.complete);
 
         request.recipient.transfer(request.value);
         request.complete = true;
