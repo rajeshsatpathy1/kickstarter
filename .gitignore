@@ -2,3 +2,4 @@ node_modules
 yarn.lock
 ethereum/build
 package-lock.json
+.next
