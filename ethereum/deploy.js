@@ -4,9 +4,7 @@ const compiledFactory = require('./build/CampaignFactory.json');
 
 const provider = new HDWalletProvider(
   'diet snow neck yellow urban fashion omit above term robot enemy cactus',
-  // remember to change this to your own phrase!
-  'https://eth-sepolia.g.alchemy.com/v2/oredQhe8Za30oMGRVwdrreWxMo1ibSJv'
-  // remember to change this to your own endpoint!
+  'https://eth-sepolia.g.alchemy.com/v2/MdYMalbYuBp8eoUID4jsG7MijqwEICqX'
 );
 const web3 = new Web3(provider);
 

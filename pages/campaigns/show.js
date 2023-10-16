@@ -5,7 +5,7 @@ class CampaignShow extends Component {
     render() {
         return (
             <Layout>
-                <h3>Showing Campaign</h3>
+                <h3>Campaign Show</h3>
             </Layout>
         );
     }

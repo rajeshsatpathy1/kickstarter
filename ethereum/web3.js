@@ -1,4 +1,4 @@
-import Web3 from "web3";
+import { Web3 } from "web3";
 
 let web3;
 
@@ -9,7 +9,7 @@ if (typeof window !== "undefined" && typeof window.ethereum !== "undefined") {
 } else {
   // We are on the server *OR* the user is not running metamask
   const provider = new Web3.providers.HttpProvider(
-    'https://eth-sepolia.g.alchemy.com/v2/oredQhe8Za30oMGRVwdrreWxMo1ibSJv'
+    'https://eth-sepolia.g.alchemy.com/v2/MdYMalbYuBp8eoUID4jsG7MijqwEICqX'
   );
   web3 = new Web3(provider);
 }
