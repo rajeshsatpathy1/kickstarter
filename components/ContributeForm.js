@@ -19,6 +19,7 @@ class ContributeForm extends Component {
         this.setState({ loading: true, errorMessage: "" });
 
         try {
+            this.state.value = Math.abs(Number(this.state.value))
             const accounts = await web3.eth.getAccounts();
             await campaign.methods.contribute().send({
                 from: accounts[0],
@@ -41,10 +42,11 @@ class ContributeForm extends Component {
                         onChange={(event) => this.setState({ value: event.target.value })}
                         label="ether"
                         labelPosition="right"
+                        type="number"
                     />
                 </Form.Field>
                 <Message error header="Oops!" content={this.state.errorMessage} />
-                <Button primary loading={this.state.loading}>Contribute!</Button>
+                <Button primary loading={this.state.loading}> Contribute! </Button>
             </Form>
         );
     }
