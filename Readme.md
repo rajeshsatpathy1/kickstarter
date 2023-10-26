@@ -1,4 +1,5 @@
 Things to add:
-Design of the project
-Why Next.js?
-What are the things I learned from the project
+- Design of the project
+- Why Next.js?
+- What are the things I learned from the project
+- Steps to start the project
