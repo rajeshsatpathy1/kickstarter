@@ -101,11 +101,13 @@ Each request needs to have a set of info that describes its purpose and state. A
 
 When user tries to interact with the contract through a webapp, it gets the contract source code. Having direct calls to the campaign contract can raise vulnerability issues. Eg: The user gets the contract source code, modifies contract, removes the security checks and deploys the fraudulent contract.
 
-![image](https://github.com/rajeshsatpathy1/kickstarter/assets/21288436/9f91f59f-79f4-4743-9263-f13e86106715)
+![image](https://github.com/rajeshsatpathy1/kickstarter/assets/21288436/9b278cd7-8ed1-4010-9b46-bc1cdf184cd8)
+
 
 A solution to this is using a factory design pattern. This adds a level of abstraction that removes the source code mainipulation bug.
 
-![image](https://github.com/rajeshsatpathy1/kickstarter/assets/21288436/caf5bf95-08f9-4407-9726-aebe3129f022)
+![image](https://github.com/rajeshsatpathy1/kickstarter/assets/21288436/968889dd-f486-4de4-ab32-4245c625839f)
+
 
 <table>
   <th colspan=3>Variables</th>
@@ -128,9 +130,18 @@ A solution to this is using a factory design pattern. This adds a level of abstr
   </tr>
 </table>
 
-**Interaction between webapp user and contract:**
+### Contract App Design
 
-![image](https://github.com/rajeshsatpathy1/kickstarter/assets/21288436/727ec99b-40af-4ce5-8d64-9d11c2def5c2)
+![contract_app_desgn drawio](https://github.com/rajeshsatpathy1/kickstarter/assets/21288436/043327a9-f7e3-4acf-a098-de876688bb0c)
+
+## Web App development
+
+Keeping the above contracts as the base, the webapp is built using Next.js framework.
+
+### Why Next.js for this project?
+
+
+
 
 
 
