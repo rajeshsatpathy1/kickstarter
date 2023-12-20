@@ -140,8 +140,12 @@ Keeping the above contracts as the base, the webapp is built using Next.js frame
 
 ### Why Next.js for this project?
 
+One of the main reasons to use Next.js is that it provides server side rendering. This means initial calls can be made to the Ethereum network, like data fetching or listing items in the smart contract, on the server.
+This is beneficial as it ensures users to see some information on the screen, regardless of whether their browsers are using MetaMask or have access to an Ethereum network.
 
+Other things Next.js provides include - hot module reloading, multi-page development framework, wraps up react and other useful tools in one package.
 
+![eth_next_server drawio](https://github.com/rajeshsatpathy1/kickstarter/assets/21288436/df75bf51-dd74-4cf4-8867-62cdde684a29)
 
 
 
@@ -153,7 +157,4 @@ Keeping the above contracts as the base, the webapp is built using Next.js frame
 
 
 Things to add:
-- Design of the project
-- Why Next.js?
-- What are the things I learned from the project
 - Steps to start the project
