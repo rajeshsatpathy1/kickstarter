@@ -132,7 +132,8 @@ A solution to this is using a factory design pattern. This adds a level of abstr
 
 ### Contract App Design
 
-![contract_app_desgn drawio](https://github.com/rajeshsatpathy1/kickstarter/assets/21288436/043327a9-f7e3-4acf-a098-de876688bb0c)
+![image](https://github.com/rajeshsatpathy1/kickstarter/assets/21288436/51b2d92d-c204-4d84-a457-11b78a257e2c)
+
 
 ## Web App development
 
